@@ -1,1 +1,1 @@
-TortoiseProc.exe /command:update /path:%1 /closeonend:1
+TortoiseProc.exe /command:update /path:%1 /closeonend:3
