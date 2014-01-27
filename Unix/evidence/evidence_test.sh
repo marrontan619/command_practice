@@ -1,6 +1,6 @@
 #!/bin/sh
 
-free | head -1
+free | head -1 &&
 while :
 do
     date +"%F %T"
