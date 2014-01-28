@@ -6,4 +6,5 @@ do
     date +"%F %T"
     free | tail -n +2
     sleep 1
+    echo
 done
