@@ -1,0 +1,12 @@
+#!/bin/sh
+
+git log --oneline
+echo -n "Yes or No? (y/n): "
+read will
+
+if [ "${will}" = "Y" -o "${will}" = "y" ]
+then
+    echo Yes
+else
+    echo No
+fi
