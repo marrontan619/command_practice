@@ -1,12 +1,17 @@
 #!/bin/sh
 
-git log --oneline
-echo -n "Yes or No? (y/n): "
+#clear
+CURRENT_BRANCH=`git symbolic-ref --short HEAD`
+
+git log --graph --decorate=full $CURRENT_BRANCH...origin/${CURRENT_BRANCH}
+
+echo -n "Is it Okey to push your commit(s)? (y/n): "
 read will
 
 if [ "${will}" = "Y" -o "${will}" = "y" ]
 then
-    echo Yes
+    exit 0
 else
-    echo No
+    echo "\033[0;31mPush is not done.\033[0;39m"
+    exit 1
 fi
