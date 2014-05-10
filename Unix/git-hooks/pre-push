@@ -3,7 +3,7 @@
 #clear
 CURRENT_BRANCH=`git symbolic-ref --short HEAD`
 
-git log --graph --decorate=full $CURRENT_BRANCH...origin/${CURRENT_BRANCH}
+git log --graph --decorate=full $CURRENT_BRANCH...origin/HEAD
 
 echo -n "Is it Okey to push your commit(s)? (y/n): "
 read will
