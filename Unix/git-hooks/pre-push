@@ -10,10 +10,10 @@ else
     REMOTE_BRANCH="origin/HEAD"
 fi
 
-git log --graph --decorate=full $CURRENT_BRANCH...${REMOTE_BRANCH}
+git log --graph --decorate=full $CURRENT_BRANCH...$REMOTE_BRANCH
 
 echo -n "Is it Okey to push your commit(s)? (y/n): "
-read will
+will=
 
 if [ "${will}" = "Y" -o "${will}" = "y" ]
 then
