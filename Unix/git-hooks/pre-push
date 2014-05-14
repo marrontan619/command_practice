@@ -1,5 +1,5 @@
 #!/bin/sh
-
+exec < /dev/tty
 #clear
 CURRENT_BRANCH=`git symbolic-ref --short HEAD`
 
@@ -13,7 +13,7 @@ fi
 git log --graph --decorate=full $CURRENT_BRANCH...$REMOTE_BRANCH
 
 echo -n "Is it Okey to push your commit(s)? (y/n): "
-will=
+read will
 
 if [ "${will}" = "Y" -o "${will}" = "y" ]
 then
