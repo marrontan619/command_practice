@@ -12,6 +12,7 @@ git config --global alias.st status
 git config --global alias.co checkout
 git config --global alias.br branch
 git config --global alias.com commit
+git config --global alias.cp cherry-pick
 git config --global gui.encoding utf-8
 git config --global pull.rebase true
 echo Done!
